@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+/* Optional: Custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Optional: Custom CSS variables */
+:root {
+    --primary-green: #16a34a;
+    --primary-blue: #2563eb;
+}
+
+/* Optional: Custom utility classes */
+.text-balance {
+    text-wrap: balance;
+}
+
+/* Optional: Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
