@@ -16,18 +16,18 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
 
 function fixCloudflareAdapter(): Plugin {
   return {
-    name: 'fix-cloudflare-adapter',
-    enforce: 'post',
+    name: "fix-cloudflare-adapter",
+    enforce: "post",
     config(config, { command }) {
-      if (command === 'build') {
+      if (command === "build") {
         return {
           build: {
             rollupOptions: {
               output: {
                 inlineDynamicImports: true,
-              }
-            }
-          }
+              },
+            },
+          },
         };
       }
     },
@@ -37,13 +37,13 @@ function fixCloudflareAdapter(): Plugin {
             ? resolvedConfig.build.rollupOptions.output
             : [resolvedConfig.build.rollupOptions.output];
 
-        outputs.forEach(output => {
+        outputs.forEach((output) => {
           if (output) {
             delete (output as any).manualChunks;
           }
         });
       }
-    }
+    },
   };
 }
 
@@ -54,15 +54,15 @@ function fixCloudflareAdapter(): Plugin {
  */
 function errorOnDuplicatesPkgDeps(
     devDependencies: PkgDep,
-    dependencies: PkgDep,
+    dependencies: PkgDep
 ) {
   let msg = "";
   const duplicateDeps = Object.keys(devDependencies).filter(
-      (dep) => dependencies[dep],
+      (dep) => dependencies[dep]
   );
 
   const qwikPkg = Object.keys(dependencies).filter((value) =>
-      /qwik/i.test(value),
+      /qwik/i.test(value)
   );
 
   msg = `Move qwik packages ${qwikPkg.join(", ")} to devDependencies`;
@@ -72,7 +72,9 @@ function errorOnDuplicatesPkgDeps(
   }
 
   msg = `
-    Warning: The dependency "${duplicateDeps.join(", ")}" is listed in both "devDependencies" and "dependencies".
+    Warning: The dependency "${duplicateDeps.join(
+      ", "
+  )}" is listed in both "devDependencies" and "dependencies".
     Please move the duplicated dependencies to "devDependencies" only and remove it from "dependencies"
   `;
 
@@ -81,34 +83,34 @@ function errorOnDuplicatesPkgDeps(
   }
 }
 
-export default defineConfig(({ command, mode }: { command: string; mode: string }): UserConfig => {
-  return {
-    plugins: [
-      qwikCity(),
-      qwikVite(),
-      tsconfigPaths({ root: "." }),
-      cloudflarePagesAdapter(),
-      fixCloudflareAdapter()
-    ],
-    build: {
-      rollupOptions: {
-        input: {
-          ssr: './src/entry.ssr.tsx', // Explicit SSR entry point
+export default defineConfig(
+    ({ command, mode }: { command: string; mode: string }): UserConfig => {
+      return {
+        plugins: [
+          qwikCity(),
+          qwikVite(),
+          tsconfigPaths({ root: "." }),
+          cloudflarePagesAdapter(),
+          fixCloudflareAdapter(),
+        ],
+        build: {
+          rollupOptions: {
+            input: "./src/entry.ssr.tsx", // Correctly set as a string path
+          },
         },
-      },
-    },
-    optimizeDeps: {
-      exclude: [],
-    },
-    server: {
-      headers: {
-        "Cache-Control": "public, max-age=0",
-      },
-    },
-    preview: {
-      headers: {
-        "Cache-Control": "public, max-age=600",
-      },
-    },
-  };
-});
+        optimizeDeps: {
+          exclude: [],
+        },
+        server: {
+          headers: {
+            "Cache-Control": "public, max-age=0",
+          },
+        },
+        preview: {
+          headers: {
+            "Cache-Control": "public, max-age=600",
+          },
+        },
+      };
+    }
+);
