@@ -12,5 +12,12 @@ export default defineConfig(() => {
             tsconfigPaths(),
             cloudflarePagesAdapter()
         ],
+        build: {
+            rollupOptions: {
+                output: {
+                    manualChunks: undefined
+                },
+            },
+        },
     };
 });
