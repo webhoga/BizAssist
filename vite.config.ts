@@ -6,6 +6,7 @@ import { defineConfig, type UserConfig } from "vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
+import { cloudflarePagesAdapter } from "@builder.io/qwik-city/adapters/cloudflare-pages/vite";
 import pkg from "./package.json";
 
 type PkgDep = Record<string, string>;
@@ -21,7 +22,12 @@ errorOnDuplicatesPkgDeps(devDependencies, dependencies);
  */
 export default defineConfig(({ command, mode }): UserConfig => {
   return {
-    plugins: [qwikCity(), qwikVite(), tsconfigPaths({ root: "." })],
+    plugins: [
+      qwikCity(),
+      qwikVite(),
+      tsconfigPaths({ root: "." }),
+      cloudflarePagesAdapter()
+    ],
     // This tells Vite which dependencies to pre-build in dev mode.
     optimizeDeps: {
       // Put problematic deps that break bundling here, mostly those with binaries.
@@ -69,19 +75,19 @@ export default defineConfig(({ command, mode }): UserConfig => {
  * @param {Object} dependencies - List of production dependencies
  */
 function errorOnDuplicatesPkgDeps(
-  devDependencies: PkgDep,
-  dependencies: PkgDep,
+    devDependencies: PkgDep,
+    dependencies: PkgDep,
 ) {
   let msg = "";
   // Create an array 'duplicateDeps' by filtering devDependencies.
   // If a dependency also exists in dependencies, it is considered a duplicate.
   const duplicateDeps = Object.keys(devDependencies).filter(
-    (dep) => dependencies[dep],
+      (dep) => dependencies[dep],
   );
 
   // include any known qwik packages
   const qwikPkg = Object.keys(dependencies).filter((value) =>
-    /qwik/i.test(value),
+      /qwik/i.test(value),
   );
 
   // any errors for missing "qwik-city-plan"
