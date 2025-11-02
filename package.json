@@ -23,8 +23,8 @@
     "qwik": "qwik"
   },
   "devDependencies": {
-    "@builder.io/qwik": "^1.17.0",
-    "@builder.io/qwik-city": "^1.17.0",
+    "@builder.io/qwik": "^1.17.1",
+    "@builder.io/qwik-city": "^1.17.1",
     "@eslint/js": "latest",
     "@tailwindcss/postcss": "^4.1.16",
     "@types/node": "20.19.0",
@@ -39,7 +39,7 @@
     "typescript-eslint": "8.38.0",
     "typescript-plugin-css-modules": "latest",
     "undici": "*",
-    "vite": "7.1.7",
+    "vite": "^7.1.12",
     "vite-tsconfig-paths": "^4.2.1"
   }
 }
