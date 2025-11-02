@@ -20,11 +20,12 @@ function fixCloudflareAdapter(): Plugin {
     enforce: "post",
     config(config, { command }) {
       if (command === "build") {
+        // Removed inlineDynamicImports:true to fix Rollup error
         return {
           build: {
             rollupOptions: {
               output: {
-                inlineDynamicImports: true,
+                // inlineDynamicImports: true, // <-- Disabled to allow multiple inputs
               },
             },
           },
@@ -95,7 +96,7 @@ export default defineConfig(
         ],
         build: {
           rollupOptions: {
-            input: "./src/entry.ssr.tsx", // Correctly set as a string path
+            input: "./src/entry.ssr.tsx", // Correct SSR entry as a string
           },
         },
         optimizeDeps: {
