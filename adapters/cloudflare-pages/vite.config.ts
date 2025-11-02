@@ -7,15 +7,18 @@ import { cloudflarePagesAdapter } from '@builder.io/qwik-city/adapters/cloudflar
 export default defineConfig(() => {
     return {
         plugins: [
-            qwikCity(),
-            qwikVite(),
+            qwikCity({
+            }),
+            qwikVite({
+            }),
             tsconfigPaths(),
             cloudflarePagesAdapter()
         ],
         build: {
+            target: 'esnext',
             rollupOptions: {
                 output: {
-                    manualChunks: undefined,
+                    inlineDynamicImports: true,
                 }
             }
         }
