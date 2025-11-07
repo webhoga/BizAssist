@@ -1,21 +1,23 @@
-/**
- * Cloudflare Pages SSR entry point for QwikCity
+/*
+ * WHAT IS THIS FILE?
+ *
+ * It's the entry point for Cloudflare Pages when building for production.
+ *
+ * Learn more about the Cloudflare Pages integration here:
+ * - https://qwik.dev/docs/deployments/cloudflare-pages/
+ *
  */
 import {
-    renderToStream,
-    type RenderToStreamOptions,
-} from "@builder.io/qwik/server";
-import Root from "./root";
+  createQwikCity,
+  type PlatformCloudflarePages,
+} from "@builder.io/qwik-city/middleware/cloudflare-pages";
+import qwikCityPlan from "@qwik-city-plan";
+import render from "./entry.ssr";
 
-export default function (opts: RenderToStreamOptions) {
-    return renderToStream(<Root />, {
-        ...opts,
-        containerAttributes: {
-            lang: "en-us",
-            ...opts.containerAttributes,
-        },
-        serverData: {
-            ...opts.serverData,
-        },
-    });
+declare global {
+  type QwikCityPlatform = PlatformCloudflarePages;
 }
+
+const fetch = createQwikCity({ render, qwikCityPlan });
+
+export { fetch };
