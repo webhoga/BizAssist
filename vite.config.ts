@@ -47,11 +47,6 @@ function fixCloudflareAdapter(): Plugin {
     };
 }
 
-/**
- * Function to identify duplicate dependencies and throw an error
- * @param devDependencies - List of dev dependencies
- * @param dependencies - List of prod dependencies
- */
 function errorOnDuplicatesPkgDeps(
     devDependencies: PkgDep,
     dependencies: PkgDep
@@ -87,10 +82,16 @@ export default defineConfig(
     ({ command, mode }: { command: string; mode: string }): UserConfig => {
         return {
             plugins: [
-                qwikCity(),
+                qwikCity({
+                    // Disable static site generation
+                    ssg: undefined,
+                }),
                 qwikVite(),
                 tsconfigPaths({ root: "." }),
-                cloudflarePagesAdapter(),
+                cloudflarePagesAdapter({
+                    // Disable static generation for Cloudflare too
+                    staticGenerate: false,
+                }),
                 fixCloudflareAdapter(),
             ],
             build: {

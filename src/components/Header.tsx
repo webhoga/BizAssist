@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import BizAssistLogo from './BizAssist Logo.png';
 
 export const Header = component$(() => {
     return (
@@ -16,7 +15,7 @@ export const Header = component$(() => {
                 <div class="flex items-center gap-2">
                     <a href="/" class="flex items-center">
                         <img
-                            src={BizAssistLogo}
+                            src="/BizAssist-Logo.png"
                             alt="BizAssist Logo"
                             class="h-10 w-auto"
                             width="120"

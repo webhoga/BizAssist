@@ -1,5 +1,4 @@
 import { component$ } from '@builder.io/qwik';
-import BizAssistLogo from './BizAssist Logo.png';
 
 export const Footer = component$(() => {
     return (
@@ -9,7 +8,7 @@ export const Footer = component$(() => {
                     <div>
                         <a href="/" class="inline-block mb-4">
                             <img
-                                src={BizAssistLogo}
+                                src="/BizAssist-Logo.png"
                                 alt="BizAssist Logo"
                                 class="h-10 w-auto"
                                 width="120"
@@ -23,18 +22,12 @@ export const Footer = component$(() => {
                     <div>
                         <h4 class="text-gray-900 font-semibold mb-4">Services</h4>
                         <ul class="space-y-2 text-sm">
-                            <li><a href="/gst-registration" class="hover:text-green-600 transition">GST
-                                Registration</a></li>
-                            <li><a href="/udyam-registration" class="hover:text-green-600 transition">UDYAM
-                                Registration</a></li>
-                            <li><a href="/iec-registration" class="hover:text-green-600 transition">IEC
-                                Registration</a></li>
-                            <li><a href="/business-plan" class="hover:text-green-600 transition">Business
-                                Plan Creation</a></li>
-                            <li><a href="/business-consultation" class="hover:text-green-600 transition">Business
-                                Consultation</a></li>
-                            <li><a href="/current-account" class="hover:text-green-600 transition">Current
-                                Account</a></li>
+                            <li><a href="/gst-registration" class="hover:text-green-600 transition">GST Registration</a></li>
+                            <li><a href="/udyam-registration" class="hover:text-green-600 transition">UDYAM Registration</a></li>
+                            <li><a href="/iec-registration" class="hover:text-green-600 transition">IEC Registration</a></li>
+                            <li><a href="/business-plan" class="hover:text-green-600 transition">Business Plan Creation</a></li>
+                            <li><a href="/business-consultation" class="hover:text-green-600 transition">Business Consultation</a></li>
+                            <li><a href="/current-account" class="hover:text-green-600 transition">Current Account</a></li>
                         </ul>
                     </div>
 
