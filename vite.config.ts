@@ -7,45 +7,44 @@ import pkg from "./package.json";
 
 type PkgDep = Record<string, string>;
 const { dependencies = {}, devDependencies = {} } = pkg as any as {
-  dependencies: PkgDep;
-  devDependencies: PkgDep;
-  [key: string]: unknown;
+    dependencies: PkgDep;
+    devDependencies: PkgDep;
+    [key: string]: unknown;
 };
 
 errorOnDuplicatesPkgDeps(devDependencies, dependencies);
 
 function fixCloudflareAdapter(): Plugin {
-  return {
-    name: "fix-cloudflare-adapter",
-    enforce: "post",
-    config(config, { command }) {
-      if (command === "build") {
-        // Removed inlineDynamicImports:true to fix Rollup error
-        return {
-          build: {
-            rollupOptions: {
-              output: {
-                // inlineDynamicImports: true, // <-- Disabled to allow multiple inputs
-              },
-            },
-          },
-        };
-      }
-    },
-    configResolved(resolvedConfig) {
-      if (resolvedConfig.build?.rollupOptions?.output) {
-        const outputs = Array.isArray(resolvedConfig.build.rollupOptions.output)
-            ? resolvedConfig.build.rollupOptions.output
-            : [resolvedConfig.build.rollupOptions.output];
+    return {
+        name: "fix-cloudflare-adapter",
+        enforce: "post",
+        config(config, { command }) {
+            if (command === "build") {
+                return {
+                    build: {
+                        rollupOptions: {
+                            output: {
+                                // Keep output configuration clean
+                            },
+                        },
+                    },
+                };
+            }
+        },
+        configResolved(resolvedConfig) {
+            if (resolvedConfig.build?.rollupOptions?.output) {
+                const outputs = Array.isArray(resolvedConfig.build.rollupOptions.output)
+                    ? resolvedConfig.build.rollupOptions.output
+                    : [resolvedConfig.build.rollupOptions.output];
 
-        outputs.forEach((output) => {
-          if (output) {
-            delete (output as any).manualChunks;
-          }
-        });
-      }
-    },
-  };
+                outputs.forEach((output) => {
+                    if (output) {
+                        delete (output as any).manualChunks;
+                    }
+                });
+            }
+        },
+    };
 }
 
 /**
@@ -57,61 +56,64 @@ function errorOnDuplicatesPkgDeps(
     devDependencies: PkgDep,
     dependencies: PkgDep
 ) {
-  let msg = "";
-  const duplicateDeps = Object.keys(devDependencies).filter(
-      (dep) => dependencies[dep]
-  );
+    let msg = "";
+    const duplicateDeps = Object.keys(devDependencies).filter(
+        (dep) => dependencies[dep]
+    );
 
-  const qwikPkg = Object.keys(dependencies).filter((value) =>
-      /qwik/i.test(value)
-  );
+    const qwikPkg = Object.keys(dependencies).filter((value) =>
+        /qwik/i.test(value)
+    );
 
-  msg = `Move qwik packages ${qwikPkg.join(", ")} to devDependencies`;
+    msg = `Move qwik packages ${qwikPkg.join(", ")} to devDependencies`;
 
-  if (qwikPkg.length > 0) {
-    throw new Error(msg);
-  }
+    if (qwikPkg.length > 0) {
+        throw new Error(msg);
+    }
 
-  msg = `
+    msg = `
     Warning: The dependency "${duplicateDeps.join(
-      ", "
-  )}" is listed in both "devDependencies" and "dependencies".
+        ", "
+    )}" is listed in both "devDependencies" and "dependencies".
     Please move the duplicated dependencies to "devDependencies" only and remove it from "dependencies"
   `;
 
-  if (duplicateDeps.length > 0) {
-    throw new Error(msg);
-  }
+    if (duplicateDeps.length > 0) {
+        throw new Error(msg);
+    }
 }
 
 export default defineConfig(
     ({ command, mode }: { command: string; mode: string }): UserConfig => {
-      return {
-        plugins: [
-          qwikCity(),
-          qwikVite(),
-          tsconfigPaths({ root: "." }),
-          cloudflarePagesAdapter(),
-          fixCloudflareAdapter(),
-        ],
-        build: {
-          rollupOptions: {
-            input: "./src/entry.ssr.tsx", // Correct SSR entry as a string
-          },
-        },
-        optimizeDeps: {
-          exclude: [],
-        },
-        server: {
-          headers: {
-            "Cache-Control": "public, max-age=0",
-          },
-        },
-        preview: {
-          headers: {
-            "Cache-Control": "public, max-age=600",
-          },
-        },
-      };
+        return {
+            plugins: [
+                qwikCity(),
+                qwikVite(),
+                tsconfigPaths({ root: "." }),
+                cloudflarePagesAdapter(),
+                fixCloudflareAdapter(),
+            ],
+            build: {
+                rollupOptions: {
+                    input: [
+                        "./src/entry.ssr.tsx",
+                        "@qwik-city-plan"
+                    ],
+                },
+            },
+            optimizeDeps: {
+                exclude: [],
+            },
+            server: {
+                headers: {
+                    "Cache-Control": "public, max-age=0",
+                },
+            },
+            preview: {
+                headers: {
+                    "Cache-Control": "public, max-age=600",
+                },
+            },
+        };
     }
 );
