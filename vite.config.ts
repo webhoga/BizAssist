@@ -82,16 +82,10 @@ export default defineConfig(
     ({ command, mode }: { command: string; mode: string }): UserConfig => {
         return {
             plugins: [
-                qwikCity({
-                    // Disable static site generation
-                    ssg: undefined,
-                }),
+                qwikCity(),
                 qwikVite(),
                 tsconfigPaths({ root: "." }),
-                cloudflarePagesAdapter({
-                    // Disable static generation for Cloudflare too
-                    staticGenerate: false,
-                }),
+                cloudflarePagesAdapter(),
                 fixCloudflareAdapter(),
             ],
             build: {
