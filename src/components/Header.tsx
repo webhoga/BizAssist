@@ -1,4 +1,5 @@
 import { component$ } from '@builder.io/qwik';
+import BizAssistLogo from './BizAssist-Logo.png';
 
 export const Header = component$(() => {
     return (
@@ -15,11 +16,11 @@ export const Header = component$(() => {
                 <div class="flex items-center gap-2">
                     <a href="/" class="flex items-center">
                         <img
-                            src="/BizAssist-Logo.png"
+                            src={BizAssistLogo}
                             alt="BizAssist Logo"
                             class="h-10 w-auto"
-                            width="120"
-                            height="40"
+                            width={112}
+                            height={40}
                         />
                     </a>
                 </div>
@@ -29,12 +30,24 @@ export const Header = component$(() => {
                     <li><a href="/#services" class="hover:text-green-600 transition">Services</a></li>
                     <li><a href="/about" class="hover:text-green-600 transition">About</a></li>
                     <li><a href="https://webhoga.com/contact" class="hover:text-green-600 transition">Contact</a></li>
-                    <li><a href="https://blog.webhoga.com" target="_blank" class="hover:text-green-600 transition">Blog</a></li>
+                    <li>
+                        <a
+                            href="https://blog.webhoga.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-green-600 transition"
+                        >
+                            Blog
+                        </a>
+                    </li>
                 </ul>
 
-                <button class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition font-medium">
+                <a
+                    href="https://webhoga.com/contact"
+                    class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition font-medium"
+                >
                     Get Quote
-                </button>
+                </a>
             </nav>
         </header>
     );

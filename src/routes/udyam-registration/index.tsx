@@ -39,10 +39,11 @@ export default component$(() => {
                             </div>
                             <span class="text-green-100 text-base">All-inclusive pricing</span>
                         </div>
-                        <button
-                            class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg">
+                        <a
+                            href="https://webhoga.com/contact"
+                            class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg inline-block">
                             Register Now
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
@@ -313,9 +314,9 @@ export default component$(() => {
                             </div>
                         </div>
 
-                        <button class="w-full bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-300 font-bold text-lg shadow-lg">
+                        <a href="https://webhoga.com/contact" class="w-full bg-green-600 text-white px-8 py-4 rounded-lg hover:bg-green-700 transition-all duration-300 font-bold text-lg shadow-lg inline-block">
                             Register Now
-                        </button>
+                        </a>
 
                         <p class="text-sm text-gray-500 mt-4">Processing time: Same day</p>
                     </div>
@@ -362,12 +363,12 @@ export default component$(() => {
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Register Your MSME?</h2>
                     <p class="text-lg sm:text-xl text-green-100 mb-8">Get your UDYAM Registration completed today and unlock government benefits</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg">
+                        <a href="https://webhoga.com/contact" class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg inline-block">
                             Start Registration - ₹1,479
-                        </button>
-                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-lg">
+                        </a>
+                        <a href="https://webhoga.com/contact" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-lg inline-block">
                             Talk to Expert
-                        </button>
+                        </a>
                     </div>
                     <p class="text-green-100 mt-6">Call us: +91 9061156535</p>
                 </div>
