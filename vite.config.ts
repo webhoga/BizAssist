@@ -1,4 +1,4 @@
-import { defineConfig, type UserConfig, type Plugin } from "vite";
+import { defineConfig, type UserConfig } from "vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
@@ -13,39 +13,6 @@ const { dependencies = {}, devDependencies = {} } = pkg as any as {
 };
 
 errorOnDuplicatesPkgDeps(devDependencies, dependencies);
-
-function fixCloudflareAdapter(): Plugin {
-    return {
-        name: "fix-cloudflare-adapter",
-        enforce: "post",
-        config(config, { command }) {
-            if (command === "build") {
-                return {
-                    build: {
-                        rollupOptions: {
-                            output: {
-                                // Keep output configuration clean
-                            },
-                        },
-                    },
-                };
-            }
-        },
-        configResolved(resolvedConfig) {
-            if (resolvedConfig.build?.rollupOptions?.output) {
-                const outputs = Array.isArray(resolvedConfig.build.rollupOptions.output)
-                    ? resolvedConfig.build.rollupOptions.output
-                    : [resolvedConfig.build.rollupOptions.output];
-
-                outputs.forEach((output) => {
-                    if (output) {
-                        delete (output as any).manualChunks;
-                    }
-                });
-            }
-        },
-    };
-}
 
 function errorOnDuplicatesPkgDeps(
     devDependencies: PkgDep,
@@ -82,20 +49,17 @@ export default defineConfig(
     ({ command, mode }: { command: string; mode: string }): UserConfig => {
         return {
             plugins: [
-                qwikCity(),
+                qwikCity(
+                    cloudflarePagesAdapter({
+                        ssg: {
+                            include: ['/*'],
+                            origin: 'https://bizassist.pages.dev', // Replace with your actual domain
+                        },
+                    })
+                ),
                 qwikVite(),
                 tsconfigPaths({ root: "." }),
-                cloudflarePagesAdapter(),
-                fixCloudflareAdapter(),
             ],
-            build: {
-                rollupOptions: {
-                    input: [
-                        "./src/entry.ssr.tsx",
-                        "@qwik-city-plan"
-                    ],
-                },
-            },
             optimizeDeps: {
                 exclude: [],
             },
