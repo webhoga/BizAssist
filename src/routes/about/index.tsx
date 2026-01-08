@@ -28,15 +28,15 @@ export default component$(() => {
                     <div class="max-w-3xl mx-auto text-center">
                         <h1 class="text-4xl sm:text-5xl font-bold mb-6 leading-tight">About BizAssist</h1>
                         <p class="text-lg sm:text-xl mb-8 text-green-50 leading-relaxed">Empowering businesses with simplified registration, compliance, and growth services</p>
-                        <button class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg">
+                        <a href="#overview" class="inline-block bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold text-lg shadow-lg">
                             Learn More
-                        </button>
+                        </a>
                     </div>
                 </div>
             </section>
 
             {/* Overview Section */}
-            <section class="py-16 sm:py-20">
+            <section id="overview" class="py-16 sm:py-20">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                         <div>
@@ -272,12 +272,12 @@ export default component$(() => {
                     <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Ready to Start Your Business Journey?</h2>
                     <p class="text-lg sm:text-xl text-green-100 mb-8">Let BizAssist handle your business registrations and compliance needs</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg">
+                        <a href="/services" class="inline-block bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg">
                             View Services
-                        </button>
-                        <button class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-lg">
+                        </a>
+                        <a href="https://webhoga.com/contact-us" target="_blank" rel="noopener noreferrer" class="inline-block border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-lg">
                             Contact Us
-                        </button>
+                        </a>
                     </div>
                     <p class="text-green-100 mt-6">Call us: +91 9061156535</p>
                 </div>

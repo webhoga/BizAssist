@@ -89,7 +89,7 @@ export const Footer = component$(() => {
                 </div>
 
                 <div class="border-t border-gray-200 pt-8 text-center text-sm text-gray-600">
-                    <p>&copy; 2025 WebHoga Digital Services.</p>
+                    <p>&copy; 2026 WebHoga Digital Services.</p>
                 </div>
             </div>
         </footer>
