@@ -2,7 +2,6 @@ import { defineConfig, type UserConfig } from "vite";
 import { qwikVite } from "@builder.io/qwik/optimizer";
 import { qwikCity } from "@builder.io/qwik-city/vite";
 import tsconfigPaths from "vite-tsconfig-paths";
-import { cloudflarePagesAdapter } from "@builder.io/qwik-city/adapters/cloudflare-pages/vite";
 import pkg from "./package.json";
 
 type PkgDep = Record<string, string>;
@@ -49,14 +48,7 @@ export default defineConfig(
     ({ command, mode }: { command: string; mode: string }): UserConfig => {
         return {
             plugins: [
-                qwikCity(
-                    cloudflarePagesAdapter({
-                        ssg: {
-                            include: ['/*'],
-                            origin: 'https://bizassist.pages.dev', // Replace with your actual domain
-                        },
-                    })
-                ),
+                qwikCity(),
                 qwikVite(),
                 tsconfigPaths({ root: "." }),
             ],
