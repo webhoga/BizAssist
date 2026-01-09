@@ -6,9 +6,8 @@ export default extendConfig(baseConfig, () => {
         build: {
             ssr: true,
             rollupOptions: {
-                input: ['src/entry.cloudflare-pages.tsx', '@qwik-city-plan'],
+                input: ['src/entry.cloudflare-pages.tsx'],
             },
-            outDir: '.cloudflare-pages',
         },
     };
 });
