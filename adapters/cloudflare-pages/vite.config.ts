@@ -1,16 +1,12 @@
-import { cloudflarePagesAdapter } from '@builder.io/qwik-city/adapters/cloudflare-pages/vite';
 import { defineConfig } from 'vite';
+import { qwikCity } from '@builder.io/qwik-city/vite';
+import { cloudflarePagesAdapter } from '@builder.io/qwik-city/adapters/cloudflare-pages/vite';
 
 export default defineConfig(() => {
     return {
-        plugins: [cloudflarePagesAdapter()],
-        build: {
-            outDir: 'dist',
-            rollupOptions: {
-                output: {
-                    entryFileNames: '_worker.js',
-                },
-            },
-        },
+        plugins: [
+            qwikCity(),
+            cloudflarePagesAdapter(),
+        ],
     };
 });
