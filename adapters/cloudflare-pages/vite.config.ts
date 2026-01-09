@@ -1,12 +1,15 @@
-import { extendConfig } from '@builder.io/qwik-city/vite';
-import baseConfig from '../../vite.config';
+import { cloudflarePagesAdapter } from '@builder.io/qwik-city/adapters/cloudflare-pages/vite';
+import { defineConfig } from 'vite';
 
-export default extendConfig(baseConfig, () => {
+export default defineConfig(() => {
     return {
+        plugins: [cloudflarePagesAdapter()],
         build: {
-            ssr: true,
+            outDir: 'dist',
             rollupOptions: {
-                input: ['src/entry.cloudflare-pages.tsx'],
+                output: {
+                    entryFileNames: '_worker.js',
+                },
             },
         },
     };
