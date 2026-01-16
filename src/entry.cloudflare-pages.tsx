@@ -5,4 +5,7 @@ import render from './entry.ssr';
 
 const onRequest = createQwikCity({ render, qwikCityPlan, manifest });
 
-export { onRequest };
+// Cloudflare Pages expects 'onRequest'
+// The generated _worker.js is looking for 'fetch'
+// Exporting both covers all bases
+export { onRequest, onRequest as fetch };
