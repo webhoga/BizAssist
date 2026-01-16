@@ -4,12 +4,12 @@ import { Header } from '~/components/Header';
 import { Footer } from '~/components/Footer';
 
 export const head: DocumentHead = {
-    title: 'Current Account Opening ₹2,999 | Business Bank Account - BizAssist',
+    title: 'Current Account Opening ₹3,133 | Business Bank Account - BizAssist',
     meta: [
         {
             name: 'description',
             content:
-                'Open business current account at ₹2,999 with major banks, 5-7 days processing, zero/low balance options, expert assistance. All India service.',
+                'Open business current account at ₹3,133 with major banks, 5-7 days processing, zero/low balance options, expert assistance. All India service.',
         },
         {
             name: 'keywords',
@@ -40,7 +40,7 @@ export default component$(() => {
                         </p>
                         <div class="flex flex-wrap gap-4 items-center mb-8">
                             <div class="bg-white text-teal-700 px-6 py-3 rounded-lg font-bold text-2xl shadow-lg">
-                                ₹2,999
+                                ₹3,133
                             </div>
                             <span class="text-teal-100 text-base">Complete assistance package</span>
                         </div>
@@ -454,7 +454,7 @@ export default component$(() => {
 
                     <div class="bg-gradient-to-br from-teal-50 to-teal-100 rounded-2xl shadow-2xl p-8 sm:p-12 max-w-md mx-auto">
                         <div class="mb-8">
-                            <div class="text-4xl sm:text-5xl font-bold text-teal-600 mb-2">₹2,999</div>
+                            <div class="text-4xl sm:text-5xl font-bold text-teal-600 mb-2">₹3,133</div>
                             <p class="text-gray-600">One-time service fee</p>
                         </div>
 
@@ -700,7 +700,7 @@ export default component$(() => {
                             href="https://webhoga.com/contact"
                             class="bg-white text-teal-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg inline-block"
                         >
-                            Open Account - ₹2,999
+                            Open Account - ₹3,133
                         </a>
                         <a
                             href="https://webhoga.com/contact"

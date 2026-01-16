@@ -4,11 +4,11 @@ import { Header } from '~/components/Header';
 import { Footer } from '~/components/Footer';
 
 export const head: DocumentHead = {
-    title: 'GST Registration Online ₹1,999 | Get GSTIN in 3-7 Days - BizAssist',
+    title: 'GST Registration Online ₹2,453 | Get GSTIN in 3-7 Days - BizAssist',
     meta: [
         {
             name: 'description',
-            content: 'Get GST registration online at ₹1,999. Receive 15-digit GSTIN in 3-7 days. Expert assistance for regular GST & composition scheme. Claim input tax credit. All India service.',
+            content: 'Get GST registration online at ₹2,453. Receive 15-digit GSTIN in 3-7 days. Expert assistance for regular GST & composition scheme. Claim input tax credit. All India service.',
         },
         {
             name: 'keywords',
@@ -35,7 +35,7 @@ export default component$(() => {
                             Start collecting GST and expand your business legally across India</p>
                         <div class="flex gap-4 items-center mb-8">
                             <div class="bg-white text-blue-700 px-6 py-3 rounded-lg font-bold text-2xl">
-                                ₹1,999
+                                ₹2,453
                             </div>
                             <span class="text-blue-100">All-inclusive pricing</span>
                         </div>
@@ -374,7 +374,7 @@ export default component$(() => {
 
                     <div class="bg-white rounded-2xl shadow-2xl p-12 max-w-md mx-auto">
                         <div class="mb-8">
-                            <div class="text-5xl font-bold text-blue-600 mb-2">₹1,999</div>
+                            <div class="text-5xl font-bold text-blue-600 mb-2">₹2,453</div>
                             <p class="text-gray-600">One-time payment</p>
                         </div>
 
@@ -477,7 +477,7 @@ export default component$(() => {
                     <p class="text-xl text-blue-100 mb-8">Start your GST registration today and grow your business legally across India</p>
                     <div class="flex gap-4 justify-center flex-wrap">
                         <a href="https://webhoga.com/contact" class="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-bold text-lg">
-                            Register Now - ₹1,999
+                            Register Now - ₹2,453
                         </a>
                     </div>
                     <p class="text-blue-100 mt-6">Call us: +91 9061156535</p>

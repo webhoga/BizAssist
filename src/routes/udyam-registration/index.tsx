@@ -4,11 +4,11 @@ import { Header } from '~/components/Header';
 import { Footer } from '~/components/Footer';
 
 export const head: DocumentHead = {
-    title: 'UDYAM Registration Online ₹1,479 | MSME Registration India - BizAssist',
+    title: 'UDYAM Registration Online ₹2,350 | MSME Registration India - BizAssist',
     meta: [
         {
             name: 'description',
-            content: 'Get UDYAM Registration (MSME) online at ₹1,479. Same-day processing, government subsidies, easy loan access & tax benefits. Expert assistance for Micro, Small & Medium Enterprises in India.',
+            content: 'Get UDYAM Registration (MSME) online at ₹2,350. Same-day processing, government subsidies, easy loan access & tax benefits. Expert assistance for Micro, Small & Medium Enterprises in India.',
         },
         {
             name: 'keywords',
@@ -35,7 +35,7 @@ export default component$(() => {
                             unlock government benefits, subsidies, and schemes designed for small businesses</p>
                         <div class="flex flex-wrap gap-4 items-center mb-8">
                             <div class="bg-white text-green-700 px-6 py-3 rounded-lg font-bold text-2xl shadow-lg">
-                                ₹1,479
+                                ₹2,350
                             </div>
                             <span class="text-green-100 text-base">All-inclusive pricing</span>
                         </div>
@@ -271,7 +271,7 @@ export default component$(() => {
 
                     <div class="bg-white rounded-2xl shadow-2xl p-8 sm:p-12 max-w-md mx-auto">
                         <div class="mb-8">
-                            <div class="text-4xl sm:text-5xl font-bold text-green-600 mb-2">₹1,479</div>
+                            <div class="text-4xl sm:text-5xl font-bold text-green-600 mb-2">₹2,350</div>
                             <p class="text-gray-600">One-time payment</p>
                         </div>
 
@@ -364,7 +364,7 @@ export default component$(() => {
                     <p class="text-lg sm:text-xl text-green-100 mb-8">Get your UDYAM Registration completed today and unlock government benefits</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                         <a href="https://webhoga.com/contact" class="bg-white text-green-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg inline-block">
-                            Start Registration - ₹1,479
+                            Start Registration - ₹2,350
                         </a>
                         <a href="https://webhoga.com/contact" class="border-2 border-white text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-all duration-300 font-semibold text-lg inline-block">
                             Talk to Expert

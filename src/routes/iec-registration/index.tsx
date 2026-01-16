@@ -4,11 +4,11 @@ import { Header } from '~/components/Header';
 import { Footer } from '~/components/Footer';
 
 export const head: DocumentHead = {
-    title: 'IEC Registration Online ₹2,299 | Import Export Code India - BizAssist',
+    title: 'IEC Registration Online ₹2,665 | Import Export Code India - BizAssist',
     meta: [
         {
             name: 'description',
-            content: 'Get IEC (Import Export Code) registration online at ₹2,299 + govt fee. 3-5 days processing, lifetime validity. Start international trade with DGFT approved IEC certificate.',
+            content: 'Get IEC (Import Export Code) registration online at ₹2,665 + govt fee. 3-5 days processing, lifetime validity. Start international trade with DGFT approved IEC certificate.',
         },
         {
             name: 'keywords',
@@ -35,7 +35,7 @@ export default component$(() => {
                         </p>
                         <div class="flex flex-wrap gap-4 items-center mb-8">
                             <div class="bg-white text-orange-700 px-6 py-3 rounded-lg font-bold text-2xl shadow-lg">
-                                ₹2,299
+                                ₹2,665
                             </div>
                             <span class="text-orange-100 text-base">Service fee (Govt fee ₹500 extra)</span>
                         </div>
@@ -337,7 +337,7 @@ export default component$(() => {
 
                     <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl shadow-2xl p-8 sm:p-12 max-w-md mx-auto">
                         <div class="mb-8">
-                            <div class="text-4xl sm:text-5xl font-bold text-orange-600 mb-2">₹2,299</div>
+                            <div class="text-4xl sm:text-5xl font-bold text-orange-600 mb-2">₹2,665</div>
                             <p class="text-gray-600">Our service fee</p>
                             <p class="text-sm text-gray-500 mt-2">+ ₹500 DGFT government fee (payable separately)</p>
                         </div>
@@ -400,7 +400,7 @@ export default component$(() => {
                     <div class="mt-8 bg-blue-50 p-6 rounded-lg max-w-md mx-auto border-l-4 border-blue-600">
                         <p class="text-blue-800 font-semibold mb-2">Important:</p>
                         <p class="text-gray-700 text-sm">
-                            Government charges ₹500 as DGFT fee which is payable separately at the time of application. Our ₹2,299 fee is only for professional service, document preparation, and application processing.
+                            Government charges ₹500 as DGFT fee which is payable separately at the time of application. Our ₹2,665 fee is only for professional service, document preparation, and application processing.
                         </p>
                     </div>
                 </div>
@@ -443,7 +443,7 @@ export default component$(() => {
                         <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300">
                             <h3 class="font-bold text-gray-800 mb-3 text-lg">Is there any government fee for IEC?</h3>
                             <p class="text-gray-600 leading-relaxed">
-                                Yes, DGFT does charge INR 500 fee for IEC registration which has to be paid by the company. Our ₹2,299 fee is purely for our professional service of document preparation and application filing.
+                                Yes, DGFT does charge INR 500 fee for IEC registration which has to be paid by the company. Our ₹2,665 fee is purely for our professional service of document preparation and application filing.
                             </p>
                         </div>
 
@@ -560,7 +560,7 @@ export default component$(() => {
                             href="https://webhoga.com/contact"
                             class="bg-white text-orange-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300 font-bold text-lg shadow-lg inline-block"
                         >
-                            Register Now - ₹2,299
+                            Register Now - ₹2,665
                         </a>
                         <a
                             href="https://webhoga.com/contact"

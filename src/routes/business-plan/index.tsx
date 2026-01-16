@@ -4,12 +4,12 @@ import { Header } from '~/components/Header';
 import { Footer } from '~/components/Footer';
 
 export const head: DocumentHead = {
-    title: 'Business Plan Creation ₹9,999 | Investor-Ready Plans - BizAssist',
+    title: 'Business Plan Creation ₹9,195 | Investor-Ready Plans - BizAssist',
     meta: [
         {
             name: 'description',
             content:
-                'Professional business plan creation at ₹9,999. 30-40 page investor-ready plans, 3-5 year financials, market analysis. Secure funding for startups & existing businesses. 7-10 days delivery.',
+                'Professional business plan creation at ₹9,195. 30-40 page investor-ready plans, 3-5 year financials, market analysis. Secure funding for startups & existing businesses. 7-10 days delivery.',
         },
         {
             name: 'keywords',
@@ -38,7 +38,7 @@ export default component$(() => {
                         </p>
                         <div class="flex gap-4 items-center mb-8">
                             <div class="bg-white text-purple-700 px-6 py-3 rounded-lg font-bold text-2xl">
-                                ₹9,999
+                                ₹9,195
                             </div>
                             <span class="text-purple-100">Complete business plan package</span>
                         </div>
@@ -395,7 +395,7 @@ export default component$(() => {
 
                     <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl shadow-2xl p-12 max-w-md mx-auto">
                         <div class="mb-8">
-                            <div class="text-5xl font-bold text-purple-600 mb-2">₹9,999</div>
+                            <div class="text-5xl font-bold text-purple-600 mb-2">₹9,195</div>
                             <p class="text-gray-600">Complete business plan</p>
                         </div>
 
@@ -447,7 +447,7 @@ export default component$(() => {
                             href="https://webhoga.com/contact"
                             class="bg-white text-purple-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition font-bold text-lg inline-block"
                         >
-                            Get Started - ₹9,999
+                            Get Started - ₹9,195
                         </a>
                         <a
                             href="https://webhoga.com/contact"
