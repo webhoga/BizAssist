@@ -43,6 +43,6 @@
     "undici": "*",
     "vite": "^7.1.12",
     "vite-tsconfig-paths": "^4.2.1",
-    "wrangler": "^3.0.0"
+    "wrangler": "^4.59.2"
   }
 }
