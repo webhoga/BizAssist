@@ -129,7 +129,7 @@ export default component$(() => {
                             </div>
                             <h3 class="text-xl font-bold text-gray-800 mb-3">Dedicated Support</h3>
                             <p class="text-gray-600 leading-relaxed">
-                                Personal relationship manager coordinates with bank on your behalf
+                                We coordinate with bank on your behalf
                             </p>
                         </div>
 
