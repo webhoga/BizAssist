@@ -134,7 +134,7 @@ export default component$(() => {
                             <div class="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-600">
                                 <p class="text-orange-800 font-semibold mb-2">Important Note:</p>
                                 <p class="text-gray-700 text-sm">
-                                    IEC is issued free of cost by DGFT. You pay only for our professional service to handle the application process.
+                                    IEC is issued by DGFT for INR 500. You pay for our professional service + DGFT fees to handle the application process.
                                 </p>
                             </div>
                         </div>
