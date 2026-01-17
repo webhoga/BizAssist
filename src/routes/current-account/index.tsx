@@ -352,20 +352,6 @@ export default component$(() => {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Bank Coordination</h3>
-                                    <p class="text-gray-600 leading-relaxed">
-                                        We coordinate with bank officials and schedule appointment for account opening
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="flex gap-6">
-                                <div class="flex-shrink-0">
-                                    <div class="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                                        4
-                                    </div>
-                                </div>
-                                <div>
                                     <h3 class="text-xl font-bold text-gray-800 mb-2">Account Activation</h3>
                                     <p class="text-gray-600 leading-relaxed">
                                         Bank processes your application and activates account within 5-7 working days
@@ -376,7 +362,7 @@ export default component$(() => {
                             <div class="flex gap-6">
                                 <div class="flex-shrink-0">
                                     <div class="w-16 h-16 bg-teal-600 text-white rounded-full flex items-center justify-center font-bold text-xl shadow-lg">
-                                        5
+                                        4
                                     </div>
                                 </div>
                                 <div>
