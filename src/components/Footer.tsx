@@ -16,7 +16,6 @@ export const Footer = component$(() => {
                                 height={135}
                             />
                         </a>
-                        <p class="text-sm mb-4 text-gray-600">by WebHoga</p>
                         <p class="text-sm text-gray-600">
                             Premium business registration and consultation services across India.
                         </p>
