@@ -311,7 +311,7 @@ export default component$(() => {
                         Our Account Opening Process
                     </h2>
                     <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                        Simple 5-step process to get your business account
+                        Simple 4-step process to get your business account
                     </p>
                     <div class="max-w-4xl mx-auto">
                         <div class="space-y-8">
@@ -447,11 +447,9 @@ export default component$(() => {
                         <div class="space-y-4 mb-8 text-left">
                             {[
                                 'Document preparation & verification',
-                                'Bank coordination & scheduling',
                                 'Application submission support',
                                 'Follow-up until account activation',
                                 'Internet banking activation help',
-                                'Post-opening support (30 days)',
                             ].map((item, idx) => (
                                 <div key={idx} class="flex items-center gap-3">
                                     <svg
@@ -521,15 +519,11 @@ export default component$(() => {
                             },
                             {
                                 q: 'Do I need to visit the bank?',
-                                a: 'Yes, one visit to the bank branch is usually required for KYC verification and account opening formalities. We\'ll schedule and guide you.',
+                                a: 'Yes, one visit to the bank branch is usually required for KYC verification and account opening formalities.',
                             },
                             {
                                 q: 'What if my application is rejected?',
                                 a: 'We carefully verify documents beforehand to minimize rejection risk. If rejected, we help you correct issues and apply with another bank at no extra cost.',
-                            },
-                            {
-                                q: 'Can I get overdraft facility?',
-                                a: 'Yes, most banks offer overdraft facilities against current accounts. We can help you with the application process after account opening.',
                             },
                         ].map((faq, idx) => (
                             <div
