@@ -614,7 +614,7 @@ export default component$(() => {
                                 ))}
                             </div>
                             <p class="text-gray-600 mb-4 leading-relaxed">
-                                "BizAssist made account opening so easy! They handled everything and got my HDFC current
+                                "BizAssist made account opening so easy! They handled everything and got my current
                                 account opened in just 6 days. Highly professional service."
                             </p>
                             <div class="font-bold text-gray-800">Suresh Babu</div>
